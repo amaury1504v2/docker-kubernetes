@@ -90,7 +90,7 @@ export default class MusicCreate extends Component {
       .post("http://localhost:5000/music/add", music)
       .then((res) => console.log(res.data));
 
-    window.location = "http://localhost:3000/music";
+    window.location = "http://localhost:3000/";
   }
 
   render() {
