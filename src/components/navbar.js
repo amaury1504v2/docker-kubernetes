@@ -20,6 +20,12 @@ export default class navbar extends Component {
                         <li className="nav-item">
                             <Link to="/user" className="nav-link" href="#">Create User</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/music" className="nav-link" href="#">Musiques</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/createMusic" className="nav-link" href="#">Ajouter une musique</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>
