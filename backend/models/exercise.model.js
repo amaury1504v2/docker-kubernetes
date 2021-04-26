@@ -1,11 +1,9 @@
-import { string } from "postcss-selector-parser";
-
 const mongoose = require('mongoose'); 
 const Schema = mongoose.Schema; 
 
 const exerciseSchema = new Schema({ //on crée un schema pour le username
-    username: { type: string, required: true },
-    description: { type: string, required: true },
+    username: { type: String, required: true },
+    description: { type: String, required: true },
     duration: { type: Number, required: true },
     date: { type: Date, required: true },
 }, {

@@ -1,11 +1,9 @@
-import { string } from "postcss-selector-parser";
-
 const mongoose = require('mongoose'); 
 const Schema = mongoose.Schema; 
 
 const userSchema = new Schema({ //on crée un schema pour le username
     username: {
-        type: string,
+        type: String,
         required: true,
         unique: true,
         trim: true,
