@@ -8,19 +8,18 @@ services:
     environment:
       - PORT=5000 # Nous pouvons définir ici plusieurs variables d'environnement
     depends_on:
-      - mongo
+      - database
     networks:
       - test-net
-  mongo:
-    image: mongo:3.6
-    volumes:
-      - mongo-storage:/data/db # Nous pouvons ajouter un volume à ce container afin de stocker les données de la base
-    expose:
-      - 27017
+  database:
+    image: 'mongo'
+    container_name: database
+    environment: 
+      MONGO_INITDB_DATABASE: test
+      MONGO_INITDB_ROOT_USERNAME: amaury1504
+      MONGO_INITDB_ROOT_PASSWORD: amaury1504
     ports:
-      - 27017:27017
-    networks:
-      - test-net
+      - '27017-27019:27017-27019'
 # Définition des volumes:
 volumes:
   mongo-storage:
