@@ -1,0 +1,2 @@
+# Quand l'image de docker se crée il faut éviter de copoier le contenu de
+node_modules
