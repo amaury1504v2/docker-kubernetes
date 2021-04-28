@@ -14,7 +14,6 @@ export default class MusicCreate extends Component {
     this.onChangeAuteur = this.onChangeAuteur.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    
 
     this.state = {
       nom: "",
@@ -73,7 +72,10 @@ export default class MusicCreate extends Component {
     });
   }
 
+
   onSubmit(e) {
+    const finalUrl = this.state.url.split("https://www.youtube.com/watch?v=");
+
     e.preventDefault();
 
     const music = {
@@ -81,16 +83,15 @@ export default class MusicCreate extends Component {
       artiste: this.state.artiste,
       genre: this.state.genre,
       auteur: this.state.auteur,
-      url: this.state.url,
+      url: finalUrl[1],
       date: this.state.date,
     };
-
 
     axios
       .post("http://localhost:5000/music/add", music)
       .then((res) => console.log(res.data));
+      window.location = "/";
 
-    window.location = "http://localhost:3000/";
   }
 
   render() {

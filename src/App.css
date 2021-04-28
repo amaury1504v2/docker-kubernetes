@@ -1,16 +1,17 @@
 .card-music {
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 7%);
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 30%);
   padding: 10px;
   position: relative;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 p {
   text-align: center;
-  margin: 0;
+  margin: 10px;
 }
 
 .card-music button {
@@ -26,4 +27,16 @@ p {
   outline: none;
   margin-right: 10px;
   border: none;
+}
+
+.container-iframe{
+  background-color: red;
+  width: 500px;
+}
+
+iframe{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  border-radius: 30px;
 }
